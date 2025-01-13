@@ -1,0 +1,110 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'CompCode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'CompCode'
+annotate view ZC_WAREH_COMP_437 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  CompCode;
+  
+  @EndUserText.label: 'CompName'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'CompName'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'CompName'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  CompName;
+  
+  @EndUserText.label: 'Street'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Street'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Street'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Street;
+  
+  @EndUserText.label: 'HouseNo'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'HouseNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'HouseNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  HouseNo;
+  
+  @EndUserText.label: 'City'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'City'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'City'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  City;
+  
+  @EndUserText.label: 'PostlCod1'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'PostlCod1'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'PostlCod1'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  PostlCod1;
+  
+  @EndUserText.label: 'Country'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Country'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Country'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Country;
+  
+}

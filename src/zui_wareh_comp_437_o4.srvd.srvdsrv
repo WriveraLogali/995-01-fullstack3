@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_WAREH_COMP_437'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_WAREH_COMP_437'
+  }
+}
+define service ZUI_WAREH_COMP_437_O4 provider contracts odata_v4_ui {
+  expose ZC_WAREH_COMP_437;
+}

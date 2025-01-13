@@ -1,0 +1,152 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'MaterialId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'MaterialId'
+annotate view ZC_WAREHOUSE_437 with
+{
+  @Consumption.valueHelpDefinition: [ {
+    entity.name: 'ZDD_material_vh_437',
+    entity.element: 'MaterialId',
+    useForValidation: true
+  } ]
+  @UI.facet: [ {
+    label: 'Material Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI: {lineItem: [{ position: 10,
+                 importance: #HIGH,
+                 label: 'MaterialId'}],
+    identification: [{ position: 10  } ],
+    selectionField: [{ position: 10 }]}
+  MaterialId;
+
+  @UI: {lineItem: [{ position: 20,
+                 importance: #MEDIUM,
+                 label: 'Plant'}],
+    identification: [{ position: 20  } ],
+    selectionField: [{ position: 20 }]}
+  Plant;
+
+  @UI: {lineItem: [{ position: 30,
+                 importance: #MEDIUM,
+                 label: 'Storage'}],
+    identification: [{ position: 30  } ],
+    selectionField: [{ position: 30 }]}
+  Storage;
+
+  @EndUserText.label: 'MatType'
+  @UI: {lineItem: [{ position: 40,
+                 importance: #LOW,
+                 label: 'MatType'}],
+    identification: [{ position: 40  } ],
+    selectionField: [{ position: 40 }]}
+  MatType;
+
+  @EndUserText.label: 'Industry'
+  @UI: {lineItem: [{ position: 50,
+                 importance: #LOW,
+                 label: 'Industry'}],
+    identification: [{ position: 50  } ],
+    selectionField: [{ position: 50 }]}
+  Industry;
+
+  @EndUserText.label: 'MatGroup'
+  @UI: {lineItem: [{ position: 60,
+                 importance: #LOW,
+                 label: 'MatGroup'}],
+    identification: [{ position: 60  } ],
+    selectionField: [{ position: 60 }]}
+  MatGroup;
+
+  @EndUserText.label: 'CreatedOn'
+  @UI: {lineItem: [{ position: 70,
+                 importance: #LOW,
+                 label: 'CreatedOn'}],
+    identification: [{ position: 70  } ],
+    selectionField: [{ position: 70 }]}
+  CreatedOn;
+
+  @EndUserText.label: 'ValidUntil'
+  @UI: {lineItem: [{ position: 80,
+                 importance: #LOW,
+                 label: 'ValidUntil'}],
+    identification: [{ position: 80  } ],
+    selectionField: [{ position: 80 }]}
+  ValidUntil;
+
+  @Consumption.valueHelpDefinition: [ {
+    entity.name: 'I_UnitOfMeasureStdVH',
+    entity.element: 'UnitOfMeasure',
+    useForValidation: true
+  } ]
+  @EndUserText.label: 'WeightUnit'
+  @UI: {lineItem: [{ position: 90,
+                 importance: #LOW,
+                 label: 'WeightUnit'}],
+    identification: [{ position: 90  } ] }
+  WeightUnit;
+
+  @EndUserText.label: 'GrossWeight'
+  @UI: {lineItem: [{ position: 100,
+                 importance: #LOW,
+                 label: 'GrossWeight'}],
+    identification: [{ position: 100  } ] }
+  GrossWeight;
+
+  @EndUserText.label: 'NetWeight'
+  @UI: {lineItem: [{ position: 110,
+                 importance: #LOW,
+                 label: 'NetWeight'}],
+    identification: [{ position: 110  } ] }
+  NetWeight;
+
+  @Consumption.valueHelpDefinition: [ {
+  entity.name: 'I_UnitOfMeasureStdVH',
+  entity.element: 'UnitOfMeasure',
+  useForValidation: true
+  } ]
+  @EndUserText.label: 'VolumeUnit'
+  @UI: {lineItem: [{ position: 120,
+                 importance: #LOW,
+                 label: 'VolumeUnit'}],
+    identification: [{ position: 120  } ] }
+  VolumeUnit;
+
+  @EndUserText.label: 'Volume'
+  @UI: {lineItem: [{ position: 130,
+                 importance: #LOW,
+                 label: 'Volume'}],
+    identification: [{ position: 130  } ] }
+  Volume;
+
+  @EndUserText.label: 'Price'
+  @UI: {lineItem: [{ position: 140,
+                 importance: #LOW,
+                 label: 'Price'}],
+    identification: [{ position: 140  } ] }
+  Price;
+
+  @EndUserText.label: 'PromotionPrice'
+  @UI: {lineItem: [{ position: 150,
+                 importance: #LOW,
+                 label: 'PromotionPrice'}],
+    identification: [{ position: 150  } ] }
+  PromotionPrice;
+
+  @Consumption.valueHelpDefinition: [ {
+    entity.name: 'I_CurrencyStdVH',
+    entity.element: 'Currency',
+    useForValidation: true
+  } ]
+  @EndUserText.label: 'Currency'
+  @UI: {lineItem: [{ position: 150,
+                 importance: #LOW,
+                 label: 'Currency'}],
+    identification: [{ position: 150  } ] }
+  Waers;
+
+}

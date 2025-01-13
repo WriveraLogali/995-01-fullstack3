@@ -1,0 +1,57 @@
+managed implementation in class ZBP_R_WAREH_COMP_437 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_WAREH_COMP_437 alias ZrWarehComp437
+persistent table ZWAREH_COMP_437
+draft table ZWREH_COMP_437_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   CompCode,
+   CompName,
+   Street,
+   HouseNo,
+   City,
+   PostlCod1,
+   Country;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   CompCode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZWAREH_COMP_437
+  {
+    CompCode = comp_code;
+    CompName = comp_name;
+    Street = street;
+    HouseNo = house_no;
+    City = city;
+    PostlCod1 = postl_cod1;
+    Country = country;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

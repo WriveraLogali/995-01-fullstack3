@@ -1,0 +1,69 @@
+managed implementation in class ZBP_R_WAREHOUSE_437 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_WAREHOUSE_437 alias ZrWarehouse437
+persistent table zwarehouse_437
+draft table zwarehouse_437_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory : create )
+  MaterialId,
+  Plant,
+  Storage,
+  MatType,
+  Price,
+  PromotionPrice,
+  Waers;
+
+  field ( readonly : update ) MaterialId, Plant, Storage;
+
+  validation validateDates on save { create; field CreatedOn, ValidUntil; }
+
+  determination setCreateDate on modify { create; field CreatedOn; }
+
+  determine action validateDatesOrder { validation validateDates; }
+
+  side effects
+  {
+    field CreatedOn affects field ValidUntil;
+    determine action validateDatesOrder executed on field CreatedOn affects messages;
+  }
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zwarehouse_437
+    {
+      MaterialId         = material_id;
+      Plant              = plant;
+      Storage            = storage;
+      MatType            = mat_type;
+      Industry           = industry;
+      MatGroup           = mat_group;
+      Unit               = unit;
+      CreatedOn          = created_on;
+      ValidUntil         = valid_until;
+      GrossWeight        = gross_weight;
+      NetWeight          = net_weight;
+      WeightUnit         = weight_unit;
+      Volume             = volume;
+      VolumeUnit         = volume_unit;
+      Price              = price;
+      PromotionPrice     = promotion_price;
+      Waers              = waers;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}
